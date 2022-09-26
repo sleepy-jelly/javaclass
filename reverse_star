@@ -1,0 +1,23 @@
+
+import java.util.Scanner;
+
+public class reverse_star {
+    public static void main(String[] args){
+        Scanner sc =new Scanner(System.in);  //
+        int nLine =sc.nextInt();
+        int spaceCnt=nLine-1;
+        int starCnt=1;
+        for(int i=0;i<nLine;i++){
+            for(spaceCnt=nLine-1;spaceCnt>i;spaceCnt--){                  
+                System.out.print(" ");
+            }
+            for(int j=0;j<starCnt;j++){
+            System.out.print("*");
+            }
+            starCnt++;
+            System.out.print("\n");
+        }
+        sc.close();
+    }
+    
+}

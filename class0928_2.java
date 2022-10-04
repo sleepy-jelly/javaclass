@@ -1,19 +1,23 @@
 public class class0928_2 {
 	public static void main(String[] args) {
-		isPrimeNumber((int)(Math.random()*100)+1);
+		int nRanNum= (int)(Math.random()*100)+1;
+		boolean nPrimeNumber =isPrimeNumber(nRanNum);
+		String nString = (nPrimeNumber ? nRanNum+" is Prime number" : nRanNum+" is not PrimeNumber");
+		System.out.println(nString);
 	}
-	static void isPrimeNumber(int nData) {
+	static boolean isPrimeNumber(int nData) {
+		boolean primeNumber= false;
 		if(nData==1) {
-			System.out.println(nData+" is not a Prime Number");	
-			return;
+			return primeNumber;
 		}
 		for(int i =2; i<nData;i++) {
 			if(nData%i==0) {
-				System.out.println(nData+" is not a Prime Number");	
-				return;
+				primeNumber= false;
+				return primeNumber;
 			}
 		}
-		System.out.println(nData+" is a Prime Number");
+		primeNumber = true;
+		return primeNumber;
 	}
 }
 

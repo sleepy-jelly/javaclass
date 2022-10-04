@@ -28,8 +28,9 @@ public class class0929 {
 	static void genLotto(int[] nData) {
 		int nRanNum=0;
 		int j=1;
+		int i =0;
 		int nMax=nData.length;
-		for(int i =0; i<nMax;i++) {
+		while(i<nMax) {
 			nRanNum=(int) (Math.random()*45)+1;
 			nData[i] =nRanNum;
 			while(j<i){
@@ -40,6 +41,7 @@ public class class0929 {
 				j++;
 			}
 			j=0;
+			i++;
 		}
 	}
 }
